@@ -1,0 +1,26 @@
+[Unit]
+Description=SQL Anywhere to PostgreSQL Sync Service
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=your_user
+Group=your_group
+WorkingDirectory=/Users/teejay/dev/SQLAnywheretoPostgreSQLMigration
+ExecStart=/usr/bin/python3 /Users/teejay/dev/SQLAnywheretoPostgreSQLMigration/main.py --daemon
+
+# Restart configuration
+Restart=always
+RestartSec=10
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+
+# Logging
+StandardOutput=append:/Users/teejay/dev/SQLAnywheretoPostgreSQLMigration/stdout.log
+StandardError=append:/Users/teejay/dev/SQLAnywheretoPostgreSQLMigration/stderr.log
+
+[Install]
+WantedBy=multi-user.target

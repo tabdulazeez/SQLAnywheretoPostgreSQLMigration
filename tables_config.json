@@ -1,0 +1,448 @@
+{
+    "tables": [
+        {
+            "name": "employees",
+            "primary_key": "id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "departments",
+            "primary_key": "id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "customers",
+            "primary_key": "customer_id",
+            "timestamp_column": "updated_at",
+            "enabled": true
+        },
+        {
+            "name": "orders",
+            "primary_key": "order_id",
+            "timestamp_column": "modified_date",
+            "enabled": true
+        },
+        {
+            "name": "products",
+            "primary_key": "product_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "inventory",
+            "primary_key": "id",
+            "timestamp_column": "last_updated",
+            "enabled": true
+        },
+        {
+            "name": "suppliers",
+            "primary_key": "supplier_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "invoices",
+            "primary_key": "invoice_id",
+            "timestamp_column": "modified_at",
+            "enabled": true
+        },
+        {
+            "name": "payments",
+            "primary_key": "payment_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "shipments",
+            "primary_key": "shipment_id",
+            "timestamp_column": "updated_at",
+            "enabled": true
+        },
+        {
+            "name": "categories",
+            "primary_key": "category_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "brands",
+            "primary_key": "brand_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "warehouses",
+            "primary_key": "warehouse_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "locations",
+            "primary_key": "location_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "addresses",
+            "primary_key": "address_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "contacts",
+            "primary_key": "contact_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "users",
+            "primary_key": "user_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "roles",
+            "primary_key": "role_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "permissions",
+            "primary_key": "permission_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "sessions",
+            "primary_key": "session_id",
+            "timestamp_column": "last_activity",
+            "enabled": true
+        },
+        {
+            "name": "audit_logs",
+            "primary_key": "log_id",
+            "timestamp_column": "created_at",
+            "enabled": true
+        },
+        {
+            "name": "transactions",
+            "primary_key": "transaction_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "accounts",
+            "primary_key": "account_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "ledger_entries",
+            "primary_key": "entry_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "budgets",
+            "primary_key": "budget_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "projects",
+            "primary_key": "project_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "tasks",
+            "primary_key": "task_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "milestones",
+            "primary_key": "milestone_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "timesheets",
+            "primary_key": "timesheet_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "expenses",
+            "primary_key": "expense_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "assets",
+            "primary_key": "asset_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "contracts",
+            "primary_key": "contract_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "documents",
+            "primary_key": "document_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "attachments",
+            "primary_key": "attachment_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "comments",
+            "primary_key": "comment_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "notifications",
+            "primary_key": "notification_id",
+            "timestamp_column": "created_at",
+            "enabled": true
+        },
+        {
+            "name": "messages",
+            "primary_key": "message_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "emails",
+            "primary_key": "email_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "templates",
+            "primary_key": "template_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "reports",
+            "primary_key": "report_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "dashboards",
+            "primary_key": "dashboard_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "widgets",
+            "primary_key": "widget_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "settings",
+            "primary_key": "setting_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "configurations",
+            "primary_key": "config_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "preferences",
+            "primary_key": "preference_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "tags",
+            "primary_key": "tag_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "labels",
+            "primary_key": "label_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "notes",
+            "primary_key": "note_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "reminders",
+            "primary_key": "reminder_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "calendars",
+            "primary_key": "calendar_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "events",
+            "primary_key": "event_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "appointments",
+            "primary_key": "appointment_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "bookings",
+            "primary_key": "booking_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "reservations",
+            "primary_key": "reservation_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "tickets",
+            "primary_key": "ticket_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "issues",
+            "primary_key": "issue_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "bugs",
+            "primary_key": "bug_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "features",
+            "primary_key": "feature_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "releases",
+            "primary_key": "release_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "versions",
+            "primary_key": "version_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "builds",
+            "primary_key": "build_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "deployments",
+            "primary_key": "deployment_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "servers",
+            "primary_key": "server_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "services",
+            "primary_key": "service_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "endpoints",
+            "primary_key": "endpoint_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "apis",
+            "primary_key": "api_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "webhooks",
+            "primary_key": "webhook_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "integrations",
+            "primary_key": "integration_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "plugins",
+            "primary_key": "plugin_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "extensions",
+            "primary_key": "extension_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "modules",
+            "primary_key": "module_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "components",
+            "primary_key": "component_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "libraries",
+            "primary_key": "library_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        },
+        {
+            "name": "dependencies",
+            "primary_key": "dependency_id",
+            "timestamp_column": "last_modified",
+            "enabled": true
+        }
+    ]
+}
