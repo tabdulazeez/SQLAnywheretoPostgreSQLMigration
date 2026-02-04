@@ -144,6 +144,82 @@ Or for a specific table:
 python main.py --status --table employees
 ```
 
+## Scheduling (Cron / Airflow)
+
+The sync service can be scheduled to run automatically at regular intervals using **cron** or **Apache Airflow**.
+
+### Quick Start: Hourly Cron Job
+
+1. **Make scripts executable**:
+   ```bash
+   chmod +x sync_job.py cron_sync.sh health_check.py
+   ```
+
+2. **Test the sync job**:
+   ```bash
+   python3 sync_job.py
+   ```
+
+3. **Schedule hourly cron job**:
+   ```bash
+   crontab -e
+   ```
+   
+   Add this line (runs every hour):
+   ```cron
+   0 * * * * /Users/teejay/dev/SQLAnywheretoPostgreSQLMigration/cron_sync.sh
+   ```
+
+4. **Monitor logs**:
+   ```bash
+   tail -f logs/cron_sync_*.log
+   ```
+
+### Quick Start: Airflow DAG
+
+1. **Copy DAG file**:
+   ```bash
+   cp airflow_dag_example.py ~/airflow/dags/sqlany_postgres_sync.py
+   ```
+
+2. **Edit configuration** in the DAG file:
+   - Update `SYNC_PROJECT_PATH`
+   - Configure `ENVIRONMENT_VARS` with credentials
+   - Set email for alerts
+
+3. **Start Airflow**:
+   ```bash
+   airflow webserver --port 8080  # Terminal 1
+   airflow scheduler               # Terminal 2
+   ```
+
+4. **Enable DAG** in Airflow UI at http://localhost:8080
+
+### Exit Codes
+
+The `sync_job.py` script returns these exit codes for monitoring:
+
+| Exit Code | Status | Description |
+|-----------|--------|-------------|
+| 0 | Success | All tables synced successfully |
+| 1 | Partial | Some tables failed |
+| 2 | Failure | All tables failed or critical error |
+| 3 | Config Error | Missing or invalid configuration |
+
+### Health Monitoring
+
+Check if sync is running on schedule:
+
+```bash
+python3 health_check.py --max-age-hours 2
+```
+
+### Documentation
+
+- **[QUICKSTART_SCHEDULING.md](QUICKSTART_SCHEDULING.md)** - 5-minute setup guide
+- **[SCHEDULING_GUIDE.md](SCHEDULING_GUIDE.md)** - Complete scheduling documentation
+- **[airflow_dag_example.py](airflow_dag_example.py)** - Airflow DAG template
+
 ## Running as a System Service
 
 ### On macOS (using launchd)
